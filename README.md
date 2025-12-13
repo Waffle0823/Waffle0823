@@ -2,7 +2,7 @@
 
 ### A budding professional C++ developer
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=Waffle0823&label=Profile views&color=0e75b6&style=flat" alt="Waffle0823" /> </p>
+<img src="https://komarev.com/ghpvc/?username=Waffle0823&label=Profile views&color=0e75b6&style=flat" alt="Waffle0823" />
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-views-counter-eight.vercel.app/?username=Waffle0823" alt="Waffle0823" /></a> </p>
 
