@@ -30,5 +30,5 @@
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats-jet-nine-34.vercel.app/api?username=Waffle0823&show_icons=true&locale=en" alt="Waffle0823" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=Waffle0823&" alt="Waffle0823" /></p>
+<p><img align="center" src="https://github-readme-streak-stats-woad-seven.vercel.app/?user=Waffle0823&" alt="Waffle0823" /></p>
 
