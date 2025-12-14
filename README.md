@@ -12,8 +12,6 @@
   </a>
 </p>
 
----
-
 ## 🚀 About Me
 
 * 🔭 Working on **an open-world isometric game**
@@ -21,8 +19,6 @@
 * 💬 Ask me about **game development**
 * 📫 Contact: **[csshin9928@gmail.com](mailto:csshin9928@gmail.com) · [csshin9928@waffly.xyz](mailto:csshin9928@waffly.xyz)**
 * 👨‍💻 Projects: **[gitlab.waffly.xyz/users/waffle/projects](https://gitlab.waffly.xyz/users/waffle/projects)**
-
----
 
 ## 🌐 Connect With Me
 
@@ -38,15 +34,11 @@
   </a>
 </p>
 
----
-
 ## 🛠 Languages & Tools
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=cs,dotnet,git,js,linux,nextjs,nodejs,react,ts,unity" />
 </p>
-
----
 
 ## 📊 GitHub Stats
 
@@ -62,8 +54,6 @@
   <img src="https://github-readme-streak-stats-woad-seven.vercel.app/?user=Waffle0823" />
 </p>
 
----
-
 ## 🎧 Spotify
 
 <p align="center">
@@ -71,7 +61,5 @@
     <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=0c1s42v8huiljv5jrwbinqfb0&cover_image=true&theme=spotify-embed&show_offline=false&background_color=121212&interchange=false&profanity=true&bar_color=53b14f&bar_color_cover=false&mode=light" />
   </a>
 </p>
-
----
 
 <p align="center"><i>Simple, clean, and focused on game development 🎮</i></p>
