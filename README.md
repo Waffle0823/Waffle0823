@@ -1,6 +1,6 @@
 # Hi 👋, I'm Waffle
 
-### A budding professional C++ developer
+### A Hobby Developer
 
 <p align="left"> <img src=https://komarev.com/ghpvc/?username=Waffle0823&amp;label=Profile%20views&amp;color=0e75b6&amp;style=flat" alt="Waffle0823" /> </p>
 
