@@ -32,3 +32,8 @@
 
 <p><img align="center" src="https://github-readme-streak-stats-woad-seven.vercel.app/?user=Waffle0823&" alt="Waffle0823" /></p>
 
+<p align="center">
+  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=0c1s42v8huiljv5jrwbinqfb0&redirect=true">
+    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=0c1s42v8huiljv5jrwbinqfb0&cover_image=true&theme=spotify-embed&show_offline=false&background_color=121212&interchange=false&profanity=true&bar_color=53b14f&bar_color_cover=false&mode=light">
+  </a>
+</p>
