@@ -43,7 +43,7 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats-jet-nine-34.vercel.app/api?username=Waffle0823&show_icons=true&locale=en" />
+  <img src="https://github-readme-stats-jet-nine-34.vercel.app/api?username=Waffle0823&show_icons=true&locale=en&theme=discord_old_blurple" />
 </p>
 
 <p align="center">
