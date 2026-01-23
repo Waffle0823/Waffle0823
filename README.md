@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy-nu-eosin.vercel.app/?username=waffle0823&theme=anon" alt="Waffle0823" />
+    <img src="https://github-profile-trophy-nu-eosin.vercel.app/?username=waffle0823&theme=nord" alt="Waffle0823" />
   </a>
 </p>
 
