@@ -47,11 +47,11 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats-jet-nine-34.vercel.app/api/top-langs?username=Waffle0823&show_icons=true&locale=en&layout=compact" />
+  <img src="https://github-readme-stats-jet-nine-34.vercel.app/api/top-langs?username=Waffle0823&show_icons=true&locale=en&layout=compact&theme=discord_old_blurple" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats-woad-seven.vercel.app/?user=Waffle0823" />
+  <img src="https://github-readme-streak-stats-woad-seven.vercel.app/?user=Waffle0823&theme=discord_old_blurple" />
 </p>
 
 ## 🎧 Spotify
