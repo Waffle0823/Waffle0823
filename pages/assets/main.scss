@@ -147,6 +147,10 @@ a:hover {
 .site-title:focus-visible,
 .site-nav .page-link:focus,
 .site-nav .page-link:focus-visible,
+.site-nav label[for="nav-trigger"]:focus,
+.site-nav label[for="nav-trigger"]:focus-visible,
+.site-nav .nav-trigger:focus,
+.site-nav .nav-trigger:focus-visible,
 .hero-btn:focus,
 .hero-btn:focus-visible {
   outline: none;
@@ -154,6 +158,7 @@ a:hover {
 
 .site-title,
 .site-nav .page-link,
+.site-nav label[for="nav-trigger"],
 .hero-btn {
   -webkit-tap-highlight-color: transparent;
 }
@@ -330,81 +335,133 @@ hr {
 }
 
 @media screen and (max-width: 600px) {
+  /* Header container */
   .site-header {
+    height: var(--navbar-height);
     min-height: var(--navbar-height);
   }
 
   .site-header .wrapper {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
-
-  .site-title {
+    height: 100%;
     padding: 0 16px;
+    gap: 0;
+  }
+
+  /* Site title */
+  .site-title {
+    padding: 0;
     font-size: 18px;
+    line-height: var(--navbar-height);
   }
 
+  .site-title::after {
+    bottom: calc((var(--navbar-height) - 1em) / 2 - 4px);
+    transform: scaleX(0);
+  }
+
+  .site-title:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Navigation */
   .site-nav {
-    background-color: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 4px 8px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: auto;
+    align-self: stretch;
+    position: static;
+    background: transparent;
+    border: none;
   }
 
+  /* Hamburger button */
   .site-nav label[for="nav-trigger"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: var(--navbar-height);
+    margin: 0;
+    padding: 0;
     cursor: pointer;
-    padding: 8px;
   }
 
   .site-nav .menu-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
   }
 
   .site-nav .menu-icon > svg {
+    display: block;
+    width: 20px;
+    height: 15px;
     fill: var(--text-heading);
   }
 
-  .site-nav input ~ .trigger {
+  /* Dropdown menu - hidden by default */
+  .site-nav .trigger {
     display: none;
   }
 
+  /* Dropdown menu - visible when checked */
   .site-nav input:checked ~ .trigger {
     display: flex;
-  }
-
-  .site-nav .trigger {
     flex-direction: column;
     align-items: stretch;
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    z-index: 999;
+    padding: 8px 0;
     height: auto;
+    max-height: calc(100vh - var(--navbar-height));
+    overflow-y: auto;
     gap: 0;
   }
 
-  .site-nav .page-link {
-    padding: 16px 24px;
+  /* Menu links - reset desktop styles */
+  .site-nav .trigger .page-link {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
     margin: 0;
-    height: auto;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
     border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
   }
 
-  .site-nav .page-link:last-child {
-    padding-right: 24px;
+  /* Remove desktop underline effect */
+  .site-nav .trigger .page-link::after {
+    display: none;
+  }
+
+  .site-nav .trigger .page-link:last-child {
     border-bottom: none;
   }
 
-  .site-nav .page-link:hover {
+  .site-nav .trigger .page-link:hover {
     background-color: var(--bg-hover);
+    color: var(--text-heading);
   }
 
-  .site-nav .page-link::after,
-  .site-nav .page-link:hover::after,
-  .site-nav .page-link.is-active::after {
-    display: none;
+  .site-nav .trigger .page-link.is-active {
+    color: var(--text-heading);
+    font-weight: 600;
   }
 }

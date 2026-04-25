@@ -34,6 +34,7 @@ youtube_username: "@WaffleYTChannel"
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Blog / Comments
 # Set this to your real Disqus shortname (https://disqus.com/admin/install/)
