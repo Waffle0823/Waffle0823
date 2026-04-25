@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Getting Started with Raylib in C++ | Waffle</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Getting Started with Raylib in C++" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A walkthrough of setting up a Raylib project in C++, from CMake configuration to drawing your very first window." />
+<meta property="og:description" content="A walkthrough of setting up a Raylib project in C++, from CMake configuration to drawing your very first window." />
+<link rel="canonical" href="http://localhost:4000/gamedev/cpp/raylib/2026/04/20/getting-started-with-raylib.html" />
+<meta property="og:url" content="http://localhost:4000/gamedev/cpp/raylib/2026/04/20/getting-started-with-raylib.html" />
+<meta property="og:site_name" content="Waffle" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-20T10:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Getting Started with Raylib in C++" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-04-20T10:00:00+09:00","datePublished":"2026-04-20T10:00:00+09:00","description":"A walkthrough of setting up a Raylib project in C++, from CMake configuration to drawing your very first window.","headline":"Getting Started with Raylib in C++","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/gamedev/cpp/raylib/2026/04/20/getting-started-with-raylib.html"},"url":"http://localhost:4000/gamedev/cpp/raylib/2026/04/20/getting-started-with-raylib.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Waffle" /></head>
+<body><header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" href="/" rel="home">Waffle</a>
+    
+    <nav class="site-nav" role="navigation" aria-label="Main navigation">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" aria-hidden="true" />
+      <label for="nav-trigger" aria-label="Toggle navigation menu">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px" aria-hidden="true" focusable="false">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <a class="page-link" href="/#home" aria-label="Home section">Home</a>
+        <a class="page-link" href="/#highlights" aria-label="Highlights section">Highlights</a>
+        <a class="page-link" href="/#about" aria-label="About section">About</a>
+        <a class="page-link" href="/projects" aria-label="Projects page">Projects</a>
+        <a class="page-link" href="/blog" aria-label="Blog page">Blog</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-hero"><div class="post-hero__image" style="background-image: url('/assets/images/blog/2026-04-20-getting-started-with-raylib/thumbnail.png');"></div><div class="post-hero__overlay"></div>
+    <div class="post-hero__content">
+      <div class="post-hero__meta">
+        <span class="post-hero__type">Tutorial</span><span class="post-hero__divider">·</span>
+          <span class="post-hero__categories"><a href="/blog/?category=gamedev">#gamedev</a><a href="/blog/?category=cpp">#cpp</a><a href="/blog/?category=raylib">#raylib</a></span></div>
+      <h1 class="post-hero__title" itemprop="name headline">Getting Started with Raylib in C++</h1>
+      <div class="post-hero__date">
+        <time datetime="2026-04-20T10:00:00+09:00" itemprop="datePublished">
+          April 20, 2026
+        </time>
+      </div>
+    </div>
+  </header>
+
+  <div class="post-body" itemprop="articleBody">
+    <p>Raylib is a fantastic little library for prototyping 2D and 3D games without the ceremony of a full engine. In this tutorial we’ll set up a fresh C++ project, link Raylib, and render our first window.</p>
+
+<h2 id="project-layout">Project layout</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>my-game/
+├── CMakeLists.txt
+└── src/
+    └── main.cpp
+</code></pre></div></div>
+
+<h2 id="cmake-configuration">CMake configuration</h2>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cmake_minimum_required</span><span class="p">(</span>VERSION 3.20<span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span>my_game CXX<span class="p">)</span>
+
+<span class="nb">find_package</span><span class="p">(</span>raylib CONFIG REQUIRED<span class="p">)</span>
+<span class="nb">add_executable</span><span class="p">(</span>my_game src/main.cpp<span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span>my_game PRIVATE raylib<span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="first-window">First window</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">"raylib.h"</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">InitWindow</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="s">"Hello Raylib"</span><span class="p">);</span>
+    <span class="n">SetTargetFPS</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">WindowShouldClose</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">BeginDrawing</span><span class="p">();</span>
+            <span class="n">ClearBackground</span><span class="p">(</span><span class="n">RAYWHITE</span><span class="p">);</span>
+            <span class="n">DrawText</span><span class="p">(</span><span class="s">"Hello, Waffle!"</span><span class="p">,</span> <span class="mi">280</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">DARKGRAY</span><span class="p">);</span>
+        <span class="n">EndDrawing</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="n">CloseWindow</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>That’s it — build, run, and you should see a small window with your first message rendered. From here you can iterate quickly into sprites, input handling and physics.</p>
+
+  </div>
+
+  <a class="post-back" href="/blog/">← Back to Blog</a><section class="post-comments">
+      <h2>Comments</h2>
+      <div id="disqus_thread"></div>
+      <script>
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://waffly-1.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          s.async = true;
+          (d.head || d.body).appendChild(s);
+        })();
+        var disqus_config = function () {
+          this.page.url = 'http://localhost:4000/gamedev/cpp/raylib/2026/04/20/getting-started-with-raylib.html';
+          this.page.identifier = '/gamedev/cpp/raylib/2026/04/20/getting-started-with-raylib';
+          this.page.title = "Getting Started with Raylib in C++";
+        };
+      </script>
+      <noscript>Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+    </section></article>
+
+<style>
+  .post-article {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+    animation: fadeIn 0.4s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .post-hero {
+    position: relative;
+    margin: 0 -24px 48px;
+    height: 380px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+  .post-hero__image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.02);
+  }
+  .post-hero__image--fallback {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #0f0f0f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .post-hero__image--fallback::after {
+    content: attr(data-letter);
+    font-size: 10rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.06);
+    letter-spacing: -0.04em;
+  }
+  .post-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%);
+  }
+  .post-hero__content {
+    position: relative;
+    z-index: 1;
+    padding: 40px 48px;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .post-hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .post-hero__type {
+    background-color: var(--text-heading);
+    color: var(--bg-primary);
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+  .post-hero__categories a {
+    color: var(--text-secondary);
+    margin-right: 0.4rem;
+  }
+  .post-hero__categories a:hover { color: var(--text-heading); }
+  .post-hero__title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 0.8rem;
+    color: var(--text-heading);
+    letter-spacing: -0.02em;
+  }
+  .post-hero__date {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+  .post-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+  }
+  .post-body h2 { margin-top: 2.4rem; font-size: 1.7rem; }
+  .post-body h3 { margin-top: 2rem; font-size: 1.3rem; }
+  .post-body img { max-width: 100%; border-radius: 4px; }
+  .post-body pre, .post-body code {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+  }
+  .post-body pre {
+    padding: 1rem 1.2rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+  }
+  .post-body blockquote {
+    border-left: 3px solid var(--text-heading);
+    padding-left: 1.2rem;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+  .post-back {
+    display: inline-block;
+    margin-top: 3rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+  }
+  .post-back:hover { color: var(--text-heading); }
+  .post-comments {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+  }
+  .post-comments h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  @media screen and (max-width: 768px) {
+    .post-hero { height: 280px; }
+    .post-hero__content { padding: 24px; }
+    .post-hero__title { font-size: 1.9rem; }
+    .post-body { font-size: 1rem; }
+  }
+</style>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Waffle</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Waffle</li><li><a class="u-email" href="mailto:csshin9928@gmail.com">csshin9928@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Waffle0823"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Waffle0823</span></a></li><li><a href="https://www.linkedin.com/in/%EC%B0%AC%EC%88%98-%EC%8B%A0-582026287"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">찬수-신-582026287</span></a></li><li><a href="https://youtube.com/%40WaffleYTChannel"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@WaffleYTChannel</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Hobby developer exploring game development with C++ and Raylib.  Sharing insights on Luau, TypeScript, and open source projects.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

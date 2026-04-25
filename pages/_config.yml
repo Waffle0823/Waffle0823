@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Shin Chan Soo
+title: Waffle
 email: csshin9928@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Hobby developer exploring game development with C++ and Raylib. 
@@ -27,11 +27,29 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.waffly.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: Waffle0823
 github_username: Waffle0823
+linkedin_username: 찬수-신-582026287
+youtube_username: "@WaffleYTChannel"
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+
+# Blog / Comments
+# Set this to your real Disqus shortname (https://disqus.com/admin/install/)
+disqus:
+  shortname: waffly-1
+
+# Default front-matter for all posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      type: "Article"
+      thumbnail: ""
 
 # Exclude from processing.
 # The following items will not be processed, by default.

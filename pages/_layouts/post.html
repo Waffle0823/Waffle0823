@@ -1,0 +1,202 @@
+---
+layout: default
+---
+{%- assign type = page.type | default: "Article" -%}
+{%- assign thumb = page.thumbnail -%}
+
+<article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-hero">
+    {%- if thumb and thumb != "" -%}
+      <div class="post-hero__image" style="background-image: url('{{ thumb | relative_url }}');"></div>
+    {%- else -%}
+      <div class="post-hero__image post-hero__image--fallback" data-letter="{{ type | slice: 0 | upcase }}"></div>
+    {%- endif -%}
+    <div class="post-hero__overlay"></div>
+    <div class="post-hero__content">
+      <div class="post-hero__meta">
+        <span class="post-hero__type">{{ type }}</span>
+        {%- if page.categories and page.categories.size > 0 -%}
+          <span class="post-hero__divider">·</span>
+          <span class="post-hero__categories">
+            {%- for cat in page.categories -%}
+              <a href="{{ '/blog/' | relative_url }}?category={{ cat | url_encode }}">#{{ cat }}</a>
+            {%- endfor -%}
+          </span>
+        {%- endif -%}
+      </div>
+      <h1 class="post-hero__title" itemprop="name headline">{{ page.title | escape }}</h1>
+      <div class="post-hero__date">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date: "%B %-d, %Y" }}
+        </time>
+      </div>
+    </div>
+  </header>
+
+  <div class="post-body" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <a class="post-back" href="{{ '/blog/' | relative_url }}">← Back to Blog</a>
+
+  {%- if page.comments and site.disqus.shortname and site.disqus.shortname != "" -%}
+    <section class="post-comments">
+      <h2>Comments</h2>
+      <div id="disqus_thread"></div>
+      <script>
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          s.async = true;
+          (d.head || d.body).appendChild(s);
+        })();
+        var disqus_config = function () {
+          this.page.url = '{{ page.url | absolute_url }}';
+          this.page.identifier = '{{ page.id }}';
+          this.page.title = {{ page.title | jsonify }};
+        };
+      </script>
+      <noscript>Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+    </section>
+  {%- endif -%}
+</article>
+
+<style>
+  .post-article {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+    animation: fadeIn 0.4s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .post-hero {
+    position: relative;
+    margin: 0 -24px 48px;
+    height: 380px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+  .post-hero__image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.02);
+  }
+  .post-hero__image--fallback {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #0f0f0f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .post-hero__image--fallback::after {
+    content: attr(data-letter);
+    font-size: 10rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.06);
+    letter-spacing: -0.04em;
+  }
+  .post-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%);
+  }
+  .post-hero__content {
+    position: relative;
+    z-index: 1;
+    padding: 40px 48px;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .post-hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .post-hero__type {
+    background-color: var(--text-heading);
+    color: var(--bg-primary);
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+  .post-hero__categories a {
+    color: var(--text-secondary);
+    margin-right: 0.4rem;
+  }
+  .post-hero__categories a:hover { color: var(--text-heading); }
+  .post-hero__title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 0.8rem;
+    color: var(--text-heading);
+    letter-spacing: -0.02em;
+  }
+  .post-hero__date {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+  .post-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+  }
+  .post-body h2 { margin-top: 2.4rem; font-size: 1.7rem; }
+  .post-body h3 { margin-top: 2rem; font-size: 1.3rem; }
+  .post-body img { max-width: 100%; border-radius: 4px; }
+  .post-body pre, .post-body code {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+  }
+  .post-body pre {
+    padding: 1rem 1.2rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+  }
+  .post-body blockquote {
+    border-left: 3px solid var(--text-heading);
+    padding-left: 1.2rem;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+  .post-back {
+    display: inline-block;
+    margin-top: 3rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+  }
+  .post-back:hover { color: var(--text-heading); }
+  .post-comments {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+  }
+  .post-comments h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  @media screen and (max-width: 768px) {
+    .post-hero { height: 280px; }
+    .post-hero__content { padding: 24px; }
+    .post-hero__title { font-size: 1.9rem; }
+    .post-body { font-size: 1rem; }
+  }
+</style>
