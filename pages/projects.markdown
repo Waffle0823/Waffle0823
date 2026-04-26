@@ -54,6 +54,21 @@ permalink: /projects/
       <a class="project-row__arrow" href="https://github.com/Waffle0823/Roblox-Supabase" target="_blank" rel="noopener" aria-label="Open Roblox-Supabase on GitHub">↗</a>
     </li>
 
+    <li class="project-row">
+      <span class="project-row__index">04</span>
+      <div class="project-row__body">
+        <div class="project-row__head">
+          <h2><a href="https://github.com/Waffle0823/WaffleEngine" target="_blank" rel="noopener">WaffleEngine</a></h2>
+          <span class="project-row__year">In Development · Engine</span>
+        </div>
+        <p>A custom game engine currently in active development.</p>
+        <div class="project-row__meta">
+          <span>Engine</span><span>OpenGL</span><span>Game Dev</span>
+        </div>
+      </div>
+      <a class="project-row__arrow" href="https://github.com/Waffle0823/WaffleEngine" target="_blank" rel="noopener" aria-label="Open WaffleEngine on GitHub">↗</a>
+    </li>
+
   </ol>
 </section>
 
