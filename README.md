@@ -52,7 +52,7 @@ Learning:       C++
 </div>
 
 <div align="center">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Waffle0823&layout=compact&theme=transparent"/>
-    <img src="https://github-readme-stats.vercel.app/api?username=Waffle0823&show_icons=true&theme=transparent"/>
-    <img alt="Waffle0823's Top Languages WakaTime" src="https://github-readme-stats.vercel.app/api/wakatime?username=Waffle0823&theme=transparent&title_color=F5B041&color=E3E3E3&text_color=DEDEDE&hide_border=true&text_bold=true&layout=compact" />
+    <img src="github-readme-stats-jet-nine-34.vercel.app/api/top-langs/?username=Waffle0823&layout=compact&theme=transparent"/>
+    <img src="github-readme-stats-jet-nine-34.vercel.app/api?username=Waffle0823&show_icons=true&theme=transparent"/>
+    <img alt="Waffle0823's Top Languages WakaTime" src="github-readme-stats-jet-nine-34.vercel.app/api/wakatime?username=Waffle0823&theme=transparent&title_color=F5B041&color=E3E3E3&text_color=DEDEDE&hide_border=true&text_bold=true&layout=compact" />
 </div>
