@@ -11,6 +11,7 @@ title: ""
   </p>
   <div class="hero-links">
     <a href="https://github.com/Waffle0823" target="_blank" class="hero-btn">GitHub</a>
+    <a href="https://gitlab.waffly.xyz/waffle" target="_blank" class="hero-btn">GitLab</a>
     <a href="https://www.youtube.com/@WaffleYTChannel" target="_blank" class="hero-btn">YouTube</a>
     <a href="mailto:csshin9928@gmail.com" class="hero-btn">Contact</a>
   </div>
@@ -95,6 +96,7 @@ title: ""
       <span class="about-label">Elsewhere</span>
       <ul class="link-list">
         <li><a href="https://github.com/Waffle0823" target="_blank">GitHub</a></li>
+        <li><a href="https://gitlab.waffly.xyz/waffle" target="_blank">GitLab</a></li>
         <li><a href="https://www.youtube.com/@WaffleYTChannel" target="_blank">YouTube</a></li>
         <li><a href="https://www.instagram.com/waffle0823" target="_blank">Instagram</a></li>
         <li><a href="https://orcid.org/0009-0007-2403-4984" target="_blank">ORCID</a></li>
