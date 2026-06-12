@@ -6,37 +6,37 @@ permalink: /projects/
 
 <section class="projects-section">
   <h1 class="projects-title">Projects</h1>
-  <p class="projects-intro">A selection of open source projects I've built and maintain on GitHub.</p>
+  <p class="projects-intro">A selection of open source projects I've built and maintain across GitHub and GitLab.</p>
 
   <ol class="project-list">
     <li class="project-row">
       <span class="project-row__index">01</span>
       <div class="project-row__body">
         <div class="project-row__head">
-          <h2><a href="https://github.com/Waffle0823/SteamworksSDK" target="_blank" rel="noopener">SteamworksSDK</a></h2>
-          <span class="project-row__year">C++ · SDK</span>
+          <h2><a href="https://gitlab.waffly.xyz/inner-voice/civic-ai/main" target="_blank" rel="noopener">Civic AI</a></h2>
+          <span class="project-row__year">In Development · Rust</span>
         </div>
-        <p>Steamworks SDK distribution packaged for easy integration into C++ game projects.</p>
+        <p>A civic complaint management system powered by AI, designed to streamline how citizen reports are collected, triaged, and resolved. Currently learning Rust while building it.</p>
         <div class="project-row__meta">
-          <span>C++</span><span>Steam</span><span>SDK</span>
+          <span>Rust</span><span>AI</span><span>Civic Tech</span>
         </div>
       </div>
-      <a class="project-row__arrow" href="https://github.com/Waffle0823/SteamworksSDK" target="_blank" rel="noopener" aria-label="Open SteamworksSDK on GitHub">↗</a>
+      <a class="project-row__arrow" href="https://gitlab.waffly.xyz/inner-voice/civic-ai/main" target="_blank" rel="noopener" aria-label="Open Civic AI on GitLab">↗</a>
     </li>
 
     <li class="project-row">
       <span class="project-row__index">02</span>
       <div class="project-row__body">
         <div class="project-row__head">
-          <h2><a href="https://github.com/Waffle0823/SteamworksSDK-Mirror" target="_blank" rel="noopener">SteamworksSDK-Mirror</a></h2>
-          <span class="project-row__year">Mirror</span>
+          <h2><a href="https://gitlab.waffly.xyz/inner-voice/civic-ai/core-api" target="_blank" rel="noopener">Civic AI · Core API</a></h2>
+          <span class="project-row__year">In Development · Rust</span>
         </div>
-        <p>A mirror of the Steamworks SDK kept up-to-date for convenient access and version pinning.</p>
+        <p>The core backend API powering Civic AI — handles complaint intake, processing pipelines, and service endpoints. A subproject of Civic AI.</p>
         <div class="project-row__meta">
-          <span>C++</span><span>Steam</span><span>Mirror</span>
+          <span>Rust</span><span>API</span><span>Backend</span>
         </div>
       </div>
-      <a class="project-row__arrow" href="https://github.com/Waffle0823/SteamworksSDK-Mirror" target="_blank" rel="noopener" aria-label="Open SteamworksSDK-Mirror on GitHub">↗</a>
+      <a class="project-row__arrow" href="https://gitlab.waffly.xyz/inner-voice/civic-ai/core-api" target="_blank" rel="noopener" aria-label="Open Civic AI Core API on GitLab">↗</a>
     </li>
 
     <li class="project-row">

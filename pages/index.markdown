@@ -7,7 +7,7 @@ title: ""
   <h1>Hi, I am Waffle</h1>
   <p class="subtitle">Software Developer from Korea</p>
   <p class="description">
-    Hobby developer exploring game development with C++ and Raylib. I use C#, Lua, and JavaScript as primary languages. Currently working on a game called Farmomatica.
+    Hobby developer exploring game development with C++ and Raylib. I use C#, Lua, and JavaScript as primary languages. Currently learning Rust while building Civic AI — an AI-powered civic complaint management system.
   </p>
   <div class="hero-links">
     <a href="https://github.com/Waffle0823" target="_blank" class="hero-btn">GitHub</a>
@@ -37,12 +37,12 @@ title: ""
     </div>
 
     <div class="highlight-card">
-      <h3>SteamworksSDK</h3>
-      <p>Steamworks SDK wrapper providing easy integration for game developers.</p>
-      <a href="https://github.com/Waffle0823/SteamworksSDK" target="_blank" class="card-link">View on GitHub →</a>
+      <h3>Civic AI</h3>
+      <p>An AI-powered civic complaint management system I'm building while learning Rust. The Core API subproject is currently in active development.</p>
+      <a href="https://gitlab.waffly.xyz/inner-voice/civic-ai/main" target="_blank" class="card-link">View on GitLab →</a>
       <br>
-      <span class="tech-badge">C++</span>
-      <span class="tech-badge">Steam</span>
+      <span class="tech-badge">Rust</span>
+      <span class="tech-badge">AI</span>
     </div>
 
     <div class="highlight-card">
@@ -57,14 +57,14 @@ title: ""
   <h2>About Me</h2>
 
   <div class="about-intro">
-    <p>I'm a hobby developer based in Suwon, South Korea. I enjoy exploring how things work under the hood — from game engines to backend systems — and building tools that solve real problems. Currently, I'm focused on game development with C++ and Raylib while continuing to ship projects across the Roblox and web ecosystems.</p>
+    <p>I'm a hobby developer based in Suwon, South Korea. I enjoy exploring how things work under the hood — from game engines to backend systems — and building tools that solve real problems. These days I'm learning Rust and building Civic AI, a civic complaint management system, while continuing to ship projects across the Roblox and web ecosystems.</p>
   </div>
 
   <div class="about-grid">
     <div class="about-block">
       <span class="about-label">Currently</span>
-      <h3>Building games with C++ &amp; Raylib</h3>
-      <p>Working on <em>Farmomatica</em>, a farming game with unique automation mechanics. Daily-driving Arch Linux as my development environment.</p>
+      <h3>Learning Rust &amp; building Civic AI</h3>
+      <p>Working on <em>Civic AI</em>, an AI-powered civic complaint management system, and its <em>Core API</em> subproject. Also tinkering with <em>Farmomatica</em> in C++ &amp; Raylib. Daily-driving Arch Linux as my development environment.</p>
     </div>
 
     <div class="about-block">
@@ -74,6 +74,7 @@ title: ""
         <li><span>TypeScript / JavaScript</span><span class="level">Proficient</span></li>
         <li><span>C#</span><span class="level">Mid-level</span></li>
         <li><span>C++</span><span class="level">Learning</span></li>
+        <li><span>Rust</span><span class="level">Learning</span></li>
       </ul>
     </div>
 
@@ -81,6 +82,7 @@ title: ""
       <span class="about-label">Tools &amp; Stack</span>
       <div class="tag-cloud">
         <span>CMake</span>
+        <span>Cargo</span>
         <span>Git</span>
         <span>Supabase</span>
         <span>PostgreSQL</span>
