@@ -21,8 +21,8 @@
 title: Waffle
 email: csshin9928@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hobby developer exploring game development with C++ and Raylib. 
-  Sharing insights on Luau, TypeScript, and open source projects.
+  Hobby developer building Farmomatica with Rust and the Bevy Engine.
+  Sharing insights on Rust, Luau, TypeScript, and open source projects.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.waffly.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: Waffle0823

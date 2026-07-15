@@ -28,21 +28,6 @@ permalink: /projects/
       <span class="project-row__index">02</span>
       <div class="project-row__body">
         <div class="project-row__head">
-          <h2><a href="https://gitlab.waffly.xyz/inner-voice/civic-ai/core-api" target="_blank" rel="noopener">Civic AI · Core API</a></h2>
-          <span class="project-row__year">In Development · Rust</span>
-        </div>
-        <p>The core backend API powering Civic AI — handles complaint intake, processing pipelines, and service endpoints. A subproject of Civic AI.</p>
-        <div class="project-row__meta">
-          <span>Rust</span><span>API</span><span>Backend</span>
-        </div>
-      </div>
-      <a class="project-row__arrow" href="https://gitlab.waffly.xyz/inner-voice/civic-ai/core-api" target="_blank" rel="noopener" aria-label="Open Civic AI Core API on GitLab">↗</a>
-    </li>
-
-    <li class="project-row">
-      <span class="project-row__index">03</span>
-      <div class="project-row__body">
-        <div class="project-row__head">
           <h2><a href="https://github.com/Waffle0823/Roblox-Supabase" target="_blank" rel="noopener">Roblox-Supabase</a></h2>
           <span class="project-row__year">Luau · Backend</span>
         </div>
@@ -55,18 +40,48 @@ permalink: /projects/
     </li>
 
     <li class="project-row">
+      <span class="project-row__index">03</span>
+      <div class="project-row__body">
+        <div class="project-row__head">
+          <h2><a href="https://github.com/Waffle0823/rpi-PMS7003" target="_blank" rel="noopener">rpi-PMS7003</a></h2>
+          <span class="project-row__year">C++ · Raspberry Pi</span>
+        </div>
+        <p>A C++17 program for the Raspberry Pi that reads air-quality data from a Plantower PMS7003 particulate-matter sensor over UART, decoding and printing PM1.0 / PM2.5 / PM10 concentrations and particle counts.</p>
+        <div class="project-row__meta">
+          <span>C++</span><span>Raspberry Pi</span><span>Embedded</span>
+        </div>
+      </div>
+      <a class="project-row__arrow" href="https://github.com/Waffle0823/rpi-PMS7003" target="_blank" rel="noopener" aria-label="Open rpi-PMS7003 on GitHub">↗</a>
+    </li>
+
+    <li class="project-row">
       <span class="project-row__index">04</span>
       <div class="project-row__body">
         <div class="project-row__head">
-          <h2><a href="https://github.com/Waffle0823/WaffleEngine" target="_blank" rel="noopener">WaffleEngine</a></h2>
-          <span class="project-row__year">In Development · Engine</span>
+          <h2><a href="https://github.com/Waffle0823/SteamworksSDK" target="_blank" rel="noopener">SteamworksSDK</a></h2>
+          <span class="project-row__year">CMake · C++</span>
         </div>
-        <p>A custom game engine currently in active development.</p>
+        <p>CMake integration for Valve's Steamworks SDK — automates fetching and linking the SDK so games can drop in Steam functionality, with cross-platform support for Windows, Linux, macOS, and Android.</p>
         <div class="project-row__meta">
-          <span>Engine</span><span>OpenGL</span><span>Game Dev</span>
+          <span>CMake</span><span>C++</span><span>Steamworks</span>
         </div>
       </div>
-      <a class="project-row__arrow" href="https://github.com/Waffle0823/WaffleEngine" target="_blank" rel="noopener" aria-label="Open WaffleEngine on GitHub">↗</a>
+      <a class="project-row__arrow" href="https://github.com/Waffle0823/SteamworksSDK" target="_blank" rel="noopener" aria-label="Open SteamworksSDK on GitHub">↗</a>
+    </li>
+
+    <li class="project-row">
+      <span class="project-row__index">05</span>
+      <div class="project-row__body">
+        <div class="project-row__head">
+          <h2><a href="https://github.com/Waffle0823/SteamworksSDK-Mirror" target="_blank" rel="noopener">SteamworksSDK-Mirror</a></h2>
+          <span class="project-row__year">Mirror · Steamworks</span>
+        </div>
+        <p>A public mirror of Valve's Steamworks SDK, providing a stable source for build tooling to fetch the SDK automatically.</p>
+        <div class="project-row__meta">
+          <span>Steamworks</span><span>SDK</span><span>Mirror</span>
+        </div>
+      </div>
+      <a class="project-row__arrow" href="https://github.com/Waffle0823/SteamworksSDK-Mirror" target="_blank" rel="noopener" aria-label="Open SteamworksSDK-Mirror on GitHub">↗</a>
     </li>
 
   </ol>

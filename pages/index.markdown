@@ -7,7 +7,7 @@ title: ""
   <h1>Hi, I am Waffle</h1>
   <p class="subtitle">Software Developer from Korea</p>
   <p class="description">
-    Hobby developer exploring game development with C++ and Raylib. I use C#, Lua, and JavaScript as primary languages. Currently learning Rust while building Civic AI — an AI-powered civic complaint management system.
+    Currently building Farmomatica with Rust and Bevy Engine while deepening my understanding of game development, low-level programming, and systems programming. I use Arch Linux as my daily development environment and enjoy exploring how software works under the hood.
   </p>
   <div class="hero-links">
     <a href="https://github.com/Waffle0823" target="_blank" class="hero-btn">GitHub</a>
@@ -23,9 +23,9 @@ title: ""
   <div class="highlight-grid">
     <div class="highlight-card">
       <h3>Farmomatica</h3>
-      <p>Currently developing an innovative farming game with unique automation mechanics.</p>
-      <span class="tech-badge">C++</span>
-      <span class="tech-badge">Raylib</span>
+      <p>Currently developing an innovative openworld game with unique automation mechanics, built with Rust and the Bevy Engine.</p>
+      <span class="tech-badge">Rust</span>
+      <span class="tech-badge">Bevy</span>
     </div>
 
     <div class="highlight-card">
@@ -51,6 +51,7 @@ title: ""
       <p>Active contributor to various open source projects and maintainer of multiple repositories.</p>
       <span class="tech-badge">Open Source</span>
     </div>
+
   </div>
 </section>
 
@@ -58,36 +59,35 @@ title: ""
   <h2>About Me</h2>
 
   <div class="about-intro">
-    <p>I'm a hobby developer based in Suwon, South Korea. I enjoy exploring how things work under the hood — from game engines to backend systems — and building tools that solve real problems. These days I'm learning Rust and building Civic AI, a civic complaint management system, while continuing to ship projects across the Roblox and web ecosystems.</p>
+    <p>I'm a hobby developer with a passion for game development and low-level programming. I enjoy exploring how things work under the hood—from game engines to backend systems—and building software that solves real problems. These days I'm building Farmomatica with Rust and Bevy Engine, while continuing to expand my skills across the Rust, Lua, and TypeScript ecosystems.</p>
   </div>
 
   <div class="about-grid">
     <div class="about-block">
       <span class="about-label">Currently</span>
-      <h3>Learning Rust &amp; building Civic AI</h3>
-      <p>Working on <em>Civic AI</em>, an AI-powered civic complaint management system, and its <em>Core API</em> subproject. Also tinkering with <em>Farmomatica</em> in C++ &amp; Raylib. Daily-driving Arch Linux as my development environment.</p>
+      <h3>Building Farmomatica with Rust</h3>
+      <p>Developing <em>Farmomatica</em>, an openworld game built with Rust and the <em>Bevy Engine</em>.</p>
     </div>
 
     <div class="about-block">
       <span class="about-label">Languages</span>
       <ul class="skill-list">
-        <li><span>Luau</span><span class="level">Proficient</span></li>
-        <li><span>TypeScript / JavaScript</span><span class="level">Proficient</span></li>
-        <li><span>C#</span><span class="level">Mid-level</span></li>
-        <li><span>C++</span><span class="level">Learning</span></li>
-        <li><span>Rust</span><span class="level">Learning</span></li>
+        <li><span>Luau</span></li>
+        <li><span>TypeScript / JavaScript</span></li>
+        <li><span>C#</span></li>
+        <li><span>C++</span></li>
+        <li><span>Rust</span></li>
       </ul>
     </div>
 
     <div class="about-block">
       <span class="about-label">Tools &amp; Stack</span>
       <div class="tag-cloud">
-        <span>CMake</span>
         <span>Cargo</span>
+        <span>Bevy</span>
         <span>Git</span>
         <span>Supabase</span>
         <span>PostgreSQL</span>
-        <span>Raylib</span>
         <span>Roblox Studio</span>
       </div>
     </div>
@@ -103,6 +103,7 @@ title: ""
         <li><a href="mailto:csshin9928@gmail.com">csshin9928@gmail.com</a></li>
       </ul>
     </div>
+
   </div>
 </section>
 
