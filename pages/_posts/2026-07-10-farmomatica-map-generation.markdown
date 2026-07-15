@@ -9,6 +9,8 @@ excerpt: "A quick peek at the procedurally generated worlds now coming out of Fa
 
 Quick devlog: the procedural **map generation** for [Farmomatica](https://github.com/Waffle0823) is up and running.
 
+![A procedurally generated Farmomatica world — oceans, coastlines, forests, and snow-capped mountains rendered as voxel terrain](/assets/images/blog/2026-07-10-farmomatica-map-generation/map.jpg)
+
 Each world is generated from noise and rendered as a voxel terrain. You can already make out distinct biomes forming naturally — deep blue oceans, sandy coastlines, green lowlands and forests, rocky highlands, and snow-capped mountain peaks at the highest elevations.
 
 No two worlds look the same, which is exactly what I was after. More to come as I layer in rivers, resources, and the systems that make it an actual farming game.
