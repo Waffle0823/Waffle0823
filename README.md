@@ -26,17 +26,9 @@
 
 ```
 OS:             Arch Linux
-Current:        Exploring Raylib with C++
-Proficient:     Luau, TypeScript/JavaScript
-Mid-level:      C#
-Learning:       C++
+Current:        Making a game called farmomatica with bevy engine
+Languages:		Lua, Typescript / Javascript, C#, C++, Rust
 ```
-
-### Tech Stack & Tools
-
-- **Build Tools:** CMake, Git
-- **Backend:** Supabase, PostgreSQL
-- **Languages:** Luau, TypeScript, JavaScript, C#, C++
 
 ### Open Source Projects
 
